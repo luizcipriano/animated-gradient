@@ -1,0 +1,155 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #FBA220, #FB4F47, #F01973, #983DB2, #38003D);
+  background-size: 900%;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: colors 25s ease infinite;
+}
+
+@keyframes colors {
+  0%{
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  margin: 50px;
+  border-radius: 50px 0px 50px 0px;
+}
+
+.card {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+.card p {
+  text-align: center;
+  color: #d9d9d9;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.texto {
+  position: relative;
+  display: inline-block;
+  color: #d9d9d9;
+  font-size: 1rem;
+  margin: 8px;
+  margin-left: 10px;
+}
+.texto::before,
+.texto::after {
+  content: "";
+  position: absolute;
+  top: 0.65em;
+  width: 7em;
+  height: 0.05em;
+  background-color: #d9d9d9;
+  left: -0.6em;
+}
+.texto::after {
+  left: initial;
+  right: -0.6em;
+}
+
+.card ul li {
+  list-style: none;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: #d9d9d9;
+  cursor: pointer;
+  border-radius: 50px 0px 50px 0px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.redes:hover {
+ transform: scale(1.1);
+}
+
+h1 {
+  padding: 10px;
+  color: #d9d9d9;
+}
+
+.user-email {
+  position: relative;
+}
+.user-email input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  background: transparent;
+}
+.user-email label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.user-email ::placeholder{
+  color: white;
+}
+
+.user-email input:focus ~ label {
+  top: -20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+
+.btn {
+  padding: 20px;
+  background-color: transparent;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  color: #d9d9d9;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px 0px 50px 0px;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
